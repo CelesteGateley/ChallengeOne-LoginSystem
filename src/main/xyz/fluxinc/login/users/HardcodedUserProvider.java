@@ -9,15 +9,23 @@ public class HardcodedUserProvider extends UserProvider {
      * The *final* keyword means that it can't be changed once it is set.
      * For Lists, this means that whilst new items can be added or removed, the whole list cannot be swapped out
      */
-    private final List<User> users = new ArrayList<>();
+    private final List<User> users;
 
     /*
      * Since we'll just have set users with this provider, we will add them all to the list when we create a new provider
      */
     public HardcodedUserProvider() {
+        users = new ArrayList<>();
         users.add(new User("admin", "admin"));
         users.add(new User("user", "user"));
         users.add(new User("guest", "guest"));
+    }
+
+    /*
+     * We can use this to provide a predefined set of users, for testing as an example
+     */
+    public HardcodedUserProvider(List<User> users) {
+        this.users = users;
     }
 
     @Override
