@@ -3,9 +3,9 @@ package xyz.fluxinc.login;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import xyz.fluxinc.login.exceptions.LoginFailedException;
-import xyz.fluxinc.login.users.HardcodedUserProvider;
+import xyz.fluxinc.login.providers.HardcodedUserProvider;
 import xyz.fluxinc.login.users.User;
-import xyz.fluxinc.login.users.UserProvider;
+import xyz.fluxinc.login.providers.UserProvider;
 
 import java.util.ArrayList;
 import java.util.List;

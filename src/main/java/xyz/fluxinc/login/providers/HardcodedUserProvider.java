@@ -1,4 +1,6 @@
-package xyz.fluxinc.login.users;
+package xyz.fluxinc.login.providers;
+
+import xyz.fluxinc.login.users.User;
 
 import java.util.ArrayList;
 import java.util.List;

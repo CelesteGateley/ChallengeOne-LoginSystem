@@ -1,7 +1,7 @@
 package xyz.fluxinc.login;
 
 import xyz.fluxinc.login.exceptions.LoginFailedException;
-import xyz.fluxinc.login.users.HardcodedUserProvider;
+import xyz.fluxinc.login.providers.HardcodedUserProvider;
 import xyz.fluxinc.login.users.User;
 
 import java.util.Scanner;

@@ -2,7 +2,7 @@ package xyz.fluxinc.login;
 
 import xyz.fluxinc.login.exceptions.LoginFailedException;
 import xyz.fluxinc.login.users.User;
-import xyz.fluxinc.login.users.UserProvider;
+import xyz.fluxinc.login.providers.UserProvider;
 
 /*
  * In this class, we'll be defining the logic we need to handle logins. Checking if a user exists, if the password matches
