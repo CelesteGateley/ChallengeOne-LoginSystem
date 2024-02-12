@@ -5,6 +5,8 @@ import xyz.fluxinc.login.users.User;
 import java.util.ArrayList;
 import java.util.List;
 
+import static xyz.fluxinc.login.helpers.EncryptionHelper.encrypt;
+
 public class HardcodedUserProvider extends UserProvider {
 
     /*
@@ -18,9 +20,9 @@ public class HardcodedUserProvider extends UserProvider {
      */
     public HardcodedUserProvider() {
         users = new ArrayList<>();
-        users.add(new User("admin", "admin"));
-        users.add(new User("user", "user"));
-        users.add(new User("guest", "guest"));
+        users.add(new User("admin", encrypt("admin")));
+        users.add(new User("user", encrypt("user")));
+        users.add(new User("guest", encrypt("guest")));
     }
 
     /*

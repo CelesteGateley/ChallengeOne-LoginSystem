@@ -18,7 +18,7 @@ public class LoginHandler {
 
     public User login(String username, String password) throws LoginFailedException {
         User user = this.provider.getUser(username);
-        if (user != null && user.getPassword().equals(password)) {
+        if (user != null && user.verifyPassword(password)) {
             return user;
         }
         throw new LoginFailedException("A user with those details does not exist");

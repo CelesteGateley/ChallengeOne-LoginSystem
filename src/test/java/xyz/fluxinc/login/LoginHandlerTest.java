@@ -10,6 +10,8 @@ import xyz.fluxinc.login.providers.UserProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+import static xyz.fluxinc.login.helpers.EncryptionHelper.encrypt;
+
 public class LoginHandlerTest {
 
     @Test
@@ -32,7 +34,7 @@ public class LoginHandlerTest {
 
     private UserProvider getUserProvider() {
         List<User> users = new ArrayList<>();
-        users.add(new User("user", "user"));
+        users.add(new User("user", encrypt("user")));
         return new HardcodedUserProvider(users);
     }
 }

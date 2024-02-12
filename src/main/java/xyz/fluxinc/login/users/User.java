@@ -1,5 +1,8 @@
 package xyz.fluxinc.login.users;
 
+import static xyz.fluxinc.login.helpers.EncryptionHelper.encrypt;
+import static xyz.fluxinc.login.helpers.EncryptionHelper.verify;
+
 public class User {
 
     private String username;
@@ -24,5 +27,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void encryptPassword(String password) {
+        this.password = encrypt(password);
+    }
+
+    public boolean verifyPassword(String password) {
+        return verify(password, this.password);
     }
 }
